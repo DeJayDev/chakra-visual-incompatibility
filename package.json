@@ -7,10 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:worker": "cloudflare",
     "dev:worker": "wrangler dev --port 8771",
-    "preview:worker": "bun run build:worker && bun run dev:worker",
-    "deploy:worker": "bun run build:worker && wrangler deploy"
+    "preview:worker": "cloudflare && bun run dev:worker",
+    "deploy:worker": "cloudflare && wrangler deploy"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.2.0",
@@ -21,7 +20,6 @@
     "@types/mdx": "^2.0.13",
     "next": "14.2.18",
     "next-themes": "^0.4.3",
-    "npm": "^10.9.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.3.0"
